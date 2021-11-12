@@ -35,4 +35,9 @@ void display_complex_number(complex c)
 		printf("%d ", c.re);
 		printf("\n");
 	}
+	if (c.re == 0 && c.im == 0)
+	{
+		printf("%d", 0);
+		printf("\n");
+	}
 }
