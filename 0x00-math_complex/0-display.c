@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "holberton.h"
 /**
  * display_complex_number - display complex number
@@ -8,12 +9,9 @@
  */
 void display_complex_number(complex c)
 {
-	if (c.re != 0)
+	if (c.re != 0 && c.im != 0)
 	{
 		printf("%d ", c.re);
-	}
-	if (c.im != 0)
-	{
 		if (c.im >= 0)
 		{
 			printf("+ ");
@@ -25,6 +23,16 @@ void display_complex_number(complex c)
 			c.im = c.im * -1;
 		}
 		printf("%di", c.im);
+		printf("\n");
 	}
-	printf("\n");
+	if (c.re == 0 && c.im != 0)
+	{
+		printf("%di", c.im);
+		printf("\n");
+	}
+	if (c.re != 0 && c.im == 0)
+	{
+		printf("%d ", c.re);
+		printf("\n");
+	}
 }
