@@ -19,6 +19,7 @@ void display_complex_number(complex c)
 		if (c.im <= 0)
 		{
 			printf("- ");
+			c.im = c.im * -1;
 		}
 		printf("%di", c.im);
 	}
