@@ -22,11 +22,20 @@ void display_complex_number(complex c)
 			printf("- ");
 			c.im = c.im * -1;
 		}
-		printf("%di", c.im);
-		printf("\n");
+		if (c.im == 1 || c.im == -1)
+		{
+			printf("i");
+			printf("\n");
+		}
+		else
+		{
+			printf("%di", c.im);
+			printf("\n");
+		}
 	}
 	if (c.re == 0 && c.im != 0)
 	{
+		printf("%d ", c.re);
 		printf("%di", c.im);
 		printf("\n");
 	}
